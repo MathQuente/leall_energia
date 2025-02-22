@@ -1,4 +1,4 @@
-export function App() {
+export function Home() {
   return (
     <>
       <div className="bg-[url('/assets/react')] bg-cover bg-center h-screen w-full">
