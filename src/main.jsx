@@ -4,16 +4,17 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import './index.css'
 import { Home } from './Home.jsx'
-import { NavBar } from './components/NavBar.jsx'
 import { Contacts } from './pages/Contacts.jsx'
+import { Layout } from './components/Layout.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      <NavBar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Contato" element={<Contacts />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="Contato" element={<Contacts />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   </StrictMode>
