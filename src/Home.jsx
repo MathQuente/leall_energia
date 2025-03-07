@@ -5,6 +5,12 @@ import { HiMiniHandRaised } from 'react-icons/hi2'
 
 import { SlideInWhenVisible } from './components/SlideInWhenVisible'
 
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay, Navigation, Pagination } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+
 const images = [
   { id: 1, url: '../src/assets/adcd.jpg' },
   { id: 2, url: '../src/assets/asd.png' },
@@ -20,9 +26,9 @@ const images = [
 export function Home() {
   return (
     <>
-      <div className="flex-flex-col">
-        <div className="flex items-center justify-center gap-10 w-full pt-10">
-          <div className="w-1/4 flex flex-col flex-wrap gap-4">
+      <div className="flex flex-col overflow-x-hidden">
+        <div className="flex justify-center gap-20 w-full pt-16 p-12">
+          <div className="w-1/3 flex flex-col flex-wrap gap-4 pt-10">
             <SlideInWhenVisible direction="left">
               <h1 className="text-4xl text-[#06b3c2] font-semibold">
                 Sobre nós
@@ -39,27 +45,31 @@ export function Home() {
             </p>
           </div>
           <div>
-            <img src={logo} className="w-[546px] h-[383px]" alt="" />
+            <img src={logo} className="w-[565px] h-[396px]" alt="" />
           </div>
         </div>
-        <div className="flex items-center justify-center gap-10 w-full pt-10">
-          <div>
-            <img src={logo} className="w-[546px] h-[383px]" alt="" />
+        <div className="flex max-w-[1250px] mx-auto gap-20 py-14">
+          <div className="w-1/2 flex justify-center">
+            <img
+              src={logo}
+              alt="TecLab Logo"
+              className="w-[423px] h-[800px] object-cover"
+            />
           </div>
-          <div className="w-1/4 flex flex-col flex-wrap gap-4">
+
+          <div className="w-full flex flex-col gap-6">
             <SlideInWhenVisible direction="right">
-              <h1 className="text-4xl text-[#06b3c2] font-semibold">
-                Nosso Principios
-              </h1>
+              <h2 className="text-4xl text-[#06b3c2] font-semibold">
+                Nossos Princípios
+              </h2>
             </SlideInWhenVisible>
 
-            <div className="flex flex-col">
-              <div className="flex gap-4">
+            <div className="flex-col">
+              <div className="flex items-center gap-4">
                 <FaHome className="text-[#06b3c2] size-8" />
                 <p className="text-xl text-[#333333] ">Missão</p>
               </div>
-
-              <p className="text-[#454545]">
+              <p className="ml-11">
                 Garantir a segurança dos profissionais da área de elétrica,
                 atestando a qualidade do material isolante de ferramentas e
                 equipamentos. Proporcionando soluções práticas e eficazes por
@@ -68,12 +78,13 @@ export function Home() {
                 qualidade e da segurança dos serviços.
               </p>
             </div>
-            <div className="flex flex-col">
-              <div className="flex gap-3">
+
+            <div className="flex-col">
+              <div className="flex items-center gap-4">
                 <IoEyeSharp className="text-[#06b3c2] size-8" />
                 <p className="text-xl text-[#333333]">Visão</p>
               </div>
-              <p className="text-[#454545]">
+              <p className="ml-11">
                 Ser a referência no Nordeste em ensaios elétricos de ferramentas
                 e equipamentos isolados, destacando-se pela excelência, inovação
                 e compromisso com a segurança. Priorizando a qualidade dos
@@ -81,12 +92,12 @@ export function Home() {
               </p>
             </div>
 
-            <div className="flex flex-col">
+            <div className="flex-col">
               <div className="flex gap-2">
                 <HiMiniHandRaised className="text-[#06b3c2] size-8" />
                 <p className="text-xl text-[#333333]">Valores</p>
               </div>
-              <p className="text-[#454545]">
+              <p className="ml-11">
                 Nossos valores estão alicerçados na honestidade, compromisso e
                 qualidade. Acreditamos que a honestidade e o compromisso com os
                 nossos clientes são fundamentais para construir relações de
@@ -99,15 +110,42 @@ export function Home() {
         </div>
         <div className="flex flex-col items-center justify-center w-full bg-gray-100 p-10">
           <h1 className="text-4xl text-[#06b3c2] mb-10">Nossos Clientes</h1>
-          <div className="grid grid-cols-3 mt-5 gap-4">
-            {images.map(image => (
-              <img
-                key={image.id}
-                src={image.url}
-                alt={image.alt}
-                className="w-40"
-              />
-            ))}
+          <div className="w-full max-w-6xl">
+            <Swiper
+              modules={[Navigation, Pagination, Autoplay]}
+              spaceBetween={30}
+              slidesPerView={3}
+              navigation
+              pagination={{ clickable: true }}
+              autoplay={{
+                delay: 1000,
+                disableOnInteraction: false
+              }}
+              loop={true}
+              breakpoints={{
+                320: {
+                  slidesPerView: 1
+                },
+                768: {
+                  slidesPerView: 2
+                },
+                1024: {
+                  slidesPerView: 3
+                }
+              }}
+            >
+              {images.map(image => (
+                <SwiperSlide key={image.id}>
+                  <div className="flex items-center justify-center h-40 p-7">
+                    <img
+                      src={image.url}
+                      alt={`Cliente ${image.id}`}
+                      className="max-h-full max-w-full object-contain"
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </div>

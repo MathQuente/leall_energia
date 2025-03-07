@@ -20,7 +20,7 @@ export function Header({ backgroundImage }) {
               </h1>
             </SlideInWhenVisible>
             <SlideInWhenVisible direction="right">
-              <p className="text-4xl font-medium">Leall Energia</p>
+              <p className="text-5xl font-medium">Leall Energia</p>
             </SlideInWhenVisible>
           </div>
         )
@@ -43,7 +43,7 @@ export function Header({ backgroundImage }) {
   return (
     <>
       <header
-        className={`relative flex flex-col ${
+        className={`relative flex flex-col overflow-x-hidden ${
           isHomePage
             ? 'min-h-screen bg-cover bg-center bg-no-repeat'
             : 'min-h-[350px] bg-cover'
