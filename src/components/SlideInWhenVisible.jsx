@@ -26,15 +26,15 @@ export function SlideInWhenVisible({ children, direction = 'left' }) {
   }, [])
 
   // Classes de Tailwind de "antes" e "depois" da animação
-  let hiddenClass = 'opacity-20'
+  let hiddenClass = 'opacity-0'
   let visibleClass = 'opacity-100'
 
   // Ajusta a direção do slide
   if (direction === 'left') {
-    hiddenClass += ' -translate-x-200'
+    hiddenClass += ' -translate-x-160'
     visibleClass += ' translate-x-0'
   } else if (direction === 'right') {
-    hiddenClass += ' translate-x-105'
+    hiddenClass += ' translate-x-160'
     visibleClass += ' translate-x-0'
   } else if (direction === 'up') {
     hiddenClass += ' translate-y-10'
