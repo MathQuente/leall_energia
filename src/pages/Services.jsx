@@ -1,5 +1,6 @@
 import { ServicesGrid } from '../components/ServicesGrid';
 
+import trabalhador from '../assets/trabalhador.jpg'
 import luvas_iso from '../assets/services-img/luvas-iso.png'
 import ferramentas_iso from '../assets/services-img/ferramentas-iso.png'
 import vara_iso from '../assets/services-img/vara-iso.png'
@@ -25,23 +26,31 @@ import { MdOutlineCheck } from 'react-icons/md';
 export function Services(){
     return(
         <>
-        <div className='bg-gradient-to-b to-blue-700 from-gray-900 flex items-center justify-center'>
-            <div className="flex flex-col items-center justify-center h-full p-4 overflow-auto bg-white md:w-50%">
-                <div className='bg-white items-center p-8 '>
-                    <h1 className="text-center text-3xl font-bold text-gray-700 b-4">Nossos serviços</h1>
-                    <h2 className="text-left p-2 text-xl text-gray-600 mt-2">Testes de isolação elétrica conforme NR-10 nos seguintes equipamentos:</h2>
-
-                    <ul className="p-4 rounded-xl w-96 text-gray-700">
-                        <li><MdOutlineCheck className='inline-block text-green-500'/>Luvas, ferramentas e varas.</li>
-                        <li><MdOutlineCheck className='inline-block text-green-500'/>Ponta de prova, capacete e bota.</li>
-                        <li><MdOutlineCheck className='inline-block text-green-500'/>Mantas, tapetes e mangotes.</li>
-                        <li><MdOutlineCheck className='inline-block text-green-500'/>Aterramento, bastão salv, lança e cesto.</li>
-                        <li><MdOutlineCheck className='inline-block text-green-500'/>Banquetas, jampe e bastões isolados.</li>
-                        <li><MdOutlineCheck className='inline-block text-green-500'/>Coberturas isoladas.</li>
-                    </ul>
+        <div className='bg-gradient-to-b to-blue-900 from-gray-950'>
+             <div className='bg-white gap-4 mx-5 md:mx-40'>
+                <div className='grid grid-cols-1 md:grid-cols-2 p-2'>
+                    <div className='-left'>
+                        <h1 className="text-3xl font-bold text-blue-900 text-center">Nossos serviços</h1>
+                        <h2 className="text-xl text-gray-900 mt-2 -left ml-10">Testes de isolação elétrica conforme NR-10 nos seguintes equipamentos:</h2>
+                        <div>
+                            <ul className="text-xl text-gray-900 box-content ml-10 pt-10">
+                                <li><MdOutlineCheck className='inline-block text-blue-600'/>Luvas, ferramentas e varas.</li>
+                                <li><MdOutlineCheck className='inline-block text-blue-600'/>Ponta de prova, capacete e bota.</li>
+                                <li><MdOutlineCheck className='inline-block text-blue-600'/>Mantas, tapetes e mangotes.</li>
+                                <li><MdOutlineCheck className='inline-block text-blue-600'/>Aterramento, bastão salv, lança e cesto.</li>
+                                <li><MdOutlineCheck className='inline-block text-blue-600'/>Banquetas, jampe e bastões isolados.</li>
+                                <li><MdOutlineCheck className='inline-block text-blue-600'/>Coberturas isoladas.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="flex justify-center md:justify-start">
+                        <img src={trabalhador} className="rounded-lg shadow-lg max-h-120 hidden md:flex"/>
+                    </div>
                 </div>
-            
-                <span className='bg-white grid grid-cols-1 md:grid-cols-2 gap-4 -left'>
+
+                <hr className='mx-5 md:mx-20 md:mt-10 text-blue-900'/>
+                <h2 className='text-3xl font-bold text-blue-900 text-center mt-10'>Equipamentos</h2>    
+                <span className='grid  grid-cols-1 md:grid-cols-3 gap-4 -left bg-white md:mx-40 mx-5'>
                     <ServicesGrid 
                         title="Ensaio de tensão elétrica aplicada em Luvas Isolantes de Borracha." 
                         subtitle="NBR 16295: Luvas de material isolante."
