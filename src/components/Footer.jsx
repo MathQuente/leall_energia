@@ -5,33 +5,58 @@ import { NavLink } from './NavLink'
 
 export function Footer() {
   return (
-    <div className="w-full h-80 bg-black flex justify-around items-center">
-      <div>
-        <img src={logo} className="size-40" alt="" />
+    <footer
+      className="bg-cover bg-center"
+      style={{
+        backgroundImage:
+          "linear-gradient(to right, rgba(19,68,111,0.9) 80%, rgba(150,150,150,1) 60%), url('../src/assets/trabalhador.jpg')"
+      }}
+    >
+      {/* Conteúdo do footer */}
+      <div className="relative z-10 container mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Coluna 1 - Logo e CNPJ */}
+        <div className="flex flex-col items-center md:items-start">
+          <img src={logo} alt="TecLab Logo" className="size-60 mb-4" />
+          {/* <p className="text-sm">Priorizando a Qualidade</p>
+          <p className="text-sm mt-4">CNPJ: 41.766.131/0001-61</p> */}
+        </div>
+
+        {/* Coluna 2 - Informações de contato */}
+        <div className="flex flex-col items-center justify-center md:items-center select-none">
+          <h3 className="text-xl font-semibold mb-4 text-white">
+            Faça contato
+          </h3>
+          <div className="flex items-center mb-2">
+            <span className="mr-2">✉️</span>
+            <p className="hover:underline text-white">
+              comercial@teclab.com.br
+            </p>
+          </div>
+          <div className="flex items-center mb-2">
+            <span className="mr-2">📱</span>
+            <p className="hover:underline text-white">(31) 9 7501 - 4130</p>
+          </div>
+          <p className="text-center text-white">
+            Rua Maria Elizabet Pessoa, 272.
+            <br />
+            Bairro Diamante. Belo Horizonte - MG.
+          </p>
+        </div>
+
+        {/* Coluna 3 - Navegação Rápida */}
+        <div className="flex flex-col items-center md:items-end select-none">
+          <h3 className="text-xl font-semibold mb-4 text-white">
+            Navegação Rápida
+          </h3>
+          <ul className="text-right">
+            <NavLink title="Inicio" href="/" footer />
+
+            <NavLink title="Contato" href="/contato" footer />
+
+            <NavLink title="Serviços" href="/servicos" footer />
+          </ul>
+        </div>
       </div>
-      <div className="flex flex-col">
-        <h1 className="text-white">Faça Contato</h1>
-        <p className="text-white text-sm flex items-center gap-2">
-          <MdOutlineEmail size={20} /> comercial@teclab.com.br
-        </p>
-        <p className="text-white text-sm flex items-center gap-2">
-          <FaWhatsapp size={20} /> (85) 8430-0302
-        </p>
-      </div>
-      <div>
-        <h1 className="text-white">Navegação Rápida</h1>
-        <ul className="flex flex-col">
-          <a className="text-white" href="">
-            Inicio
-          </a>
-          <a className="text-white" href="">
-            Contato
-          </a>
-          <a className="text-white" href="">
-            Serviço
-          </a>
-        </ul>
-      </div>
-    </div>
+    </footer>
   )
 }
