@@ -12,12 +12,12 @@ export function SlideInWhenVisible({ children, direction = 'left' }) {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true)
-          // se quiser que anime só uma vez e não repita, descomente a linha abaixo:
           observer.unobserve(entry.target)
         }
       },
       {
-        threshold: 0.1 // 0.1 = 10% do elemento visível para disparar
+        threshold: 0.5,
+        rootMargin: '0px 0px -50px 0px' // Adjusts detection area
       }
     )
 
@@ -25,32 +25,49 @@ export function SlideInWhenVisible({ children, direction = 'left' }) {
     return () => observer.disconnect()
   }, [])
 
-  // Classes de Tailwind de "antes" e "depois" da animação
-  let hiddenClass = 'opacity-0'
-  let visibleClass = 'opacity-100'
+  // Configuração responsiva
+  const getTransformClasses = () => {
+    let baseHidden = 'opacity-0'
+    let baseVisible = 'opacity-100'
 
-  // Ajusta a direção do slide
-  if (direction === 'left') {
-    hiddenClass += ' -translate-x-160'
-    visibleClass += ' translate-x-0'
-  } else if (direction === 'right') {
-    hiddenClass += ' translate-x-160'
-    visibleClass += ' translate-x-0'
-  } else if (direction === 'up') {
-    hiddenClass += ' translate-y-10'
-    visibleClass += ' translate-y-0'
-  } else if (direction === 'down') {
-    hiddenClass += ' -translate-y-10'
-    visibleClass += ' translate-y-0'
+    switch (direction) {
+      case 'left':
+        return {
+          hidden: `${baseHidden} -translate-x-20 md:-translate-x-48 lg:-translate-x-64`,
+          visible: `${baseVisible} translate-x-0`
+        }
+      case 'right':
+        return {
+          hidden: `${baseHidden} translate-x-20 md:translate-x-48 lg:translate-x-64`,
+          visible: `${baseVisible} translate-x-0`
+        }
+      case 'left-header':
+        return {
+          hidden: `${baseHidden} -translate-x-50 md:-translate-x-48 lg:-translate-x-64`,
+          visible: `${baseVisible} translate-y-0`
+        }
+      case 'right-header':
+        return {
+          hidden: `${baseHidden} translate-x-50 md:translate-x-48 lg:translate-x-64`,
+          visible: `${baseVisible} translate-y-0`
+        }
+      default:
+        return {
+          hidden: baseHidden,
+          visible: baseVisible
+        }
+    }
   }
+
+  const { hidden, visible } = getTransformClasses()
 
   return (
     <div
       ref={ref}
       className={`
-        transition-all duration-[1.5s] ease-in-out
-        transform
-        ${isVisible ? visibleClass : hiddenClass}
+        transform transition-all
+        duration-[1.5s] ease-out
+        ${isVisible ? visible : hidden}
       `}
     >
       {children}
