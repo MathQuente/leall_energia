@@ -19,6 +19,7 @@ import bastoes_iso from '../assets/services-img/bastoes_iso.png'
 import cobertura_circulares from '../assets/services-img/cobertura_circulares.png'
 import cobertura_rigidas from '../assets/services-img/cobertura_rigidas.png'
 import cobertura_borracha from '../assets/services-img/cobertura_borracha.png'
+import nr_10 from '../assets/nr-10.jpg'
 
 
 import { MdOutlineCheck } from 'react-icons/md';
@@ -26,31 +27,32 @@ import { MdOutlineCheck } from 'react-icons/md';
 export function Services(){
     return(
         <>
-        <div className='bg-gradient-to-b to-blue-900 from-gray-950'>
-             <div className='bg-white gap-4 mx-5 md:mx-40'>
-                <div className='grid grid-cols-1 md:grid-cols-2 p-2'>
-                    <div className='-left'>
-                        <h1 className="text-3xl font-bold text-blue-900 text-center">Nossos serviços</h1>
-                        <h2 className="text-xl text-gray-900 mt-2 -left ml-10">Testes de isolação elétrica conforme NR-10 nos seguintes equipamentos:</h2>
-                        <div>
-                            <ul className="text-xl text-gray-900 box-content ml-10 pt-10">
-                                <li><MdOutlineCheck className='inline-block text-blue-600'/>Luvas, ferramentas e varas.</li>
-                                <li><MdOutlineCheck className='inline-block text-blue-600'/>Ponta de prova, capacete e bota.</li>
-                                <li><MdOutlineCheck className='inline-block text-blue-600'/>Mantas, tapetes e mangotes.</li>
-                                <li><MdOutlineCheck className='inline-block text-blue-600'/>Aterramento, bastão salv, lança e cesto.</li>
-                                <li><MdOutlineCheck className='inline-block text-blue-600'/>Banquetas, jampe e bastões isolados.</li>
-                                <li><MdOutlineCheck className='inline-block text-blue-600'/>Coberturas isoladas.</li>
+        <div className='bg-white mb-10'>
+             <div className='bg-white gap-4 mx-1 md:mx-50'>
+                <div className='flex flex-col md:flex-row p-10 items-center justify-center gap-20'>
+                    <div className='flex flex-col items-center justify-center'>
+                        <h1 className="text-3xl font-bold bg-gradient-to-r from-[#1196bb] to-[#21256b] bg-clip-text text-transparent ">Nossos serviços</h1>
+                        <h2 className="text-xl text-gray-900 mt-2 -left">Testes de isolação elétrica conforme NR-10 nos seguintes equipamentos:</h2>
+                        <div className=''>
+                            <ul className="text-xl text-gray-900 box-content pt-10">
+                                <li className='mb-4'><MdOutlineCheck className='inline-block text-blue-900'/>Luvas, ferramentas e varas.</li>
+                                <li className='mb-4'><MdOutlineCheck className='inline-block text-blue-900'/>Ponta de prova, capacete e bota.</li>
+                                <li className='mb-4'><MdOutlineCheck className='inline-block text-blue-900'/>Mantas, tapetes e mangotes.</li>
+                                <li className='mb-4'><MdOutlineCheck className='inline-block text-blue-900'/>Aterramento, bastão salv, lança e cesto.</li>
+                                <li className='mb-4'><MdOutlineCheck className='inline-block text-blue-900'/>Banquetas, jampe e bastões isolados.</li>
+                                <li className='mb-4'><MdOutlineCheck className='inline-block text-blue-900'/>Coberturas isoladas.</li>
                             </ul>
                         </div>
                     </div>
-                    <div className="flex justify-center md:justify-start">
-                        <img src={trabalhador} className="rounded-lg shadow-lg max-h-120 hidden md:flex"/>
+                    <div className="flex justify-end mr-10">
+                        <img src={nr_10} className="rounded-lg shadow-lg hidden md:flex max-h-120 max-w-120"/>
                     </div>
                 </div>
 
-                <hr className='mx-5 md:mx-20 md:mt-10 text-blue-900'/>
-                <h2 className='text-3xl font-bold text-blue-900 text-center mt-10'>Equipamentos</h2>    
-                <span className='grid  grid-cols-1 md:grid-cols-3 gap-4 -left bg-white md:mx-40 mx-5'>
+                <hr className='mx-5 lg:mx-20 md:mx-10 md:mt-10 text-blue-900'/>
+                <h2 className='text-3xl font-bold bg-gradient-to-r from-[#1196bb] to-[#21256b] bg-clip-text text-transparent text-center p-5'>Equipamentos</h2> 
+
+                <span className='grid grid-cols-1 md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 -left bg-white lg:ml-20 lg:mr-20 mx-5'>
                     <ServicesGrid 
                         title="Ensaio de tensão elétrica aplicada em Luvas Isolantes de Borracha." 
                         subtitle="NBR 16295: Luvas de material isolante."

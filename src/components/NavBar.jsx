@@ -97,8 +97,7 @@ export function NavBar() {
       >
         <div className="p-4">
           {/* Cabeçalho do menu lateral */}
-          <div className="flex justify-between items-center mb-6">
-            <h2 className="text-xl font-semibold">NR 10</h2>
+          <div className="flex justify-end items-center mb-6">
             <button
               onClick={toggleSidebar}
               className="text-gray-700 hover:text-gray-900 focus:outline-none"
@@ -109,62 +108,15 @@ export function NavBar() {
 
           {/* Links do menu */}
           <div className="space-y-4">
-            <div className="py-2 border-b border-gray-200">
-              <a
-                href="/sobre"
-                className="block text-gray-800 hover:text-blue-600"
-              >
-                Sobre Nós
-              </a>
-            </div>
-            <div className="py-2 border-b border-gray-200">
-              <a
-                href="/clientes"
-                className="block text-gray-800 hover:text-blue-600"
-              >
-                Clientes
-              </a>
-            </div>
-            <div className="py-2 border-b border-gray-200">
-              <a
-                href="/servicos"
-                className="block text-gray-800 hover:text-blue-600"
-              >
-                Serviços
-              </a>
-            </div>
-            <div className="py-2 border-b border-gray-200">
-              <a
-                href="/orcamento"
-                className="block text-gray-800 hover:text-blue-600"
-              >
-                Orçamento
-              </a>
-            </div>
-            <div className="py-2 border-b border-gray-200">
-              <a
-                href="/contato"
-                className="block text-gray-800 hover:text-blue-600"
-              >
-                Contato
-              </a>
-            </div>
-            <div className="py-2 border-b border-gray-200">
-              <a
-                href="/trabalhe-conosco"
-                className="block text-gray-800 hover:text-blue-600"
-              >
-                Trabalhe Conosco
-              </a>
-            </div>
-            <div className="py-2 border-b border-gray-200">
-              <a
-                href="/blog"
-                className="block text-gray-800 hover:text-blue-600"
-              >
-                Blog
-              </a>
-            </div>
+            <ul className="py-2 border-b border-gray-200">
+              <NavLink title="Inicio" href="/" footer />
+            </ul>
+            <ul className="py-2 border-b border-gray-200">
+              <NavLink title="Contato" href="/contato" footer />
+            </ul>
+            <ul className="py-2 border-b border-gray-200">
+              <NavLink title="Serviços" href="/servicos" footer />
+            </ul>
           </div>
 
           {/* Informações de contato no final do menu */}

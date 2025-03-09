@@ -13,10 +13,10 @@ export function Footer() {
       }}
     >
       {/* Conteúdo do footer */}
-      <div className="relative z-10 container mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="flex flex-col gap-10 md:flex-row md:justify-around md:items-center">
         {/* Coluna 1 - Logo e CNPJ */}
         <div className="flex flex-col items-center md:items-start">
-          <img src={logo} alt="TecLab Logo" className="size-60 mb-4" />
+          <img src={logo} alt="TecLab Logo" className="size-60" />
           {/* <p className="text-sm">Priorizando a Qualidade</p>
           <p className="text-sm mt-4">CNPJ: 41.766.131/0001-61</p> */}
         </div>
@@ -27,28 +27,26 @@ export function Footer() {
             Faça contato
           </h3>
           <div className="flex items-center mb-2">
-            <span className="mr-2">✉️</span>
+            <MdOutlineEmail />
             <p className="hover:underline text-white">
               comercial@teclab.com.br
             </p>
           </div>
           <div className="flex items-center mb-2">
-            <span className="mr-2">📱</span>
+            <FaWhatsapp />
             <p className="hover:underline text-white">(31) 9 7501 - 4130</p>
           </div>
           <p className="text-center text-white">
-            Rua Maria Elizabet Pessoa, 272.
+            R. Antônio Pereira do Nascimento, 160
             <br />
-            Bairro Diamante. Belo Horizonte - MG.
+            Luzardo Viana. Maracanaú - CE.
           </p>
         </div>
 
         {/* Coluna 3 - Navegação Rápida */}
-        <div className="flex flex-col items-center md:items-end select-none">
-          <h3 className="text-xl font-semibold mb-4 text-white">
-            Navegação Rápida
-          </h3>
-          <ul className="text-right">
+        <div className="flex flex-col items-center md:items-center select-none mb-10">
+          <h3 className="text-xl font-semibold text-white">Navegação Rápida</h3>
+          <ul className="text-center">
             <NavLink title="Inicio" href="/" footer />
 
             <NavLink title="Contato" href="/contato" footer />

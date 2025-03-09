@@ -14,12 +14,12 @@ export function Header({ backgroundImage }) {
       case '/':
         return (
           <div className="text-center text-white">
-            <SlideInWhenVisible direction="left">
+            <SlideInWhenVisible direction="left-header">
               <h1 className="text-8xl text-[#06b3c2] font-bold mb-4">
                 Bem-vindo
               </h1>
             </SlideInWhenVisible>
-            <SlideInWhenVisible direction="right">
+            <SlideInWhenVisible direction="right-header">
               <p className="text-5xl font-medium">Leall Energia</p>
             </SlideInWhenVisible>
           </div>
