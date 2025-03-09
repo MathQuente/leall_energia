@@ -10,6 +10,7 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
+import { FloatingButton } from './components/FloatingButton'
 
 const images = [
   { id: 1, url: '../src/assets/adcd.jpg' },
@@ -27,8 +28,8 @@ export function Home() {
   return (
     <>
       <div className="flex flex-col overflow-x-hidden">
-        <div className="flex justify-center gap-20 w-full pt-16 p-12">
-          <div className="w-1/3 flex flex-col flex-wrap gap-4 pt-10">
+        <div className="flex justify-center md:gap-20 w-full md:pt-16 px-10">
+          <div className="md:w-1/3 flex flex-col flex-wrap gap-4 pt-10">
             <SlideInWhenVisible direction="left">
               <h1 className="text-4xl text-[#06b3c2] font-semibold">
                 Sobre nós
@@ -45,19 +46,25 @@ export function Home() {
             </p>
           </div>
           <div>
-            <img src={logo} className="w-[565px] h-[396px]" alt="" />
+            <img
+              src={logo}
+              className="md:w-[565px] md:h-[396px] md:block hidden"
+              alt=""
+            />
           </div>
         </div>
-        <div className="flex max-w-[1250px] mx-auto gap-20 py-14">
-          <div className="w-1/2 flex justify-center">
+
+        <div className="flex w-full px-10 md:pt-16 md:max-w-[1290px] md:mx-auto md:px-4 md:gap-20 md:py-14 mb-10 mt-10">
+          <div className="w-full md:flex justify-center hidden">
             <img
               src={logo}
               alt="TecLab Logo"
               className="w-[423px] h-[800px] object-cover"
             />
           </div>
+          <FloatingButton />
 
-          <div className="w-full flex flex-col gap-6">
+          <div className="flex flex-col flex-wrap item gap-6">
             <SlideInWhenVisible direction="right">
               <h2 className="text-4xl text-[#06b3c2] font-semibold">
                 Nossos Princípios
@@ -69,7 +76,7 @@ export function Home() {
                 <FaHome className="text-[#06b3c2] size-8" />
                 <p className="text-xl text-[#333333] ">Missão</p>
               </div>
-              <p className="ml-11">
+              <p className="md:ml-11">
                 Garantir a segurança dos profissionais da área de elétrica,
                 atestando a qualidade do material isolante de ferramentas e
                 equipamentos. Proporcionando soluções práticas e eficazes por
@@ -84,7 +91,7 @@ export function Home() {
                 <IoEyeSharp className="text-[#06b3c2] size-8" />
                 <p className="text-xl text-[#333333]">Visão</p>
               </div>
-              <p className="ml-11">
+              <p className="md:ml-11">
                 Ser a referência no Nordeste em ensaios elétricos de ferramentas
                 e equipamentos isolados, destacando-se pela excelência, inovação
                 e compromisso com a segurança. Priorizando a qualidade dos
@@ -97,7 +104,7 @@ export function Home() {
                 <HiMiniHandRaised className="text-[#06b3c2] size-8" />
                 <p className="text-xl text-[#333333]">Valores</p>
               </div>
-              <p className="ml-11">
+              <p className="md:ml-11">
                 Nossos valores estão alicerçados na honestidade, compromisso e
                 qualidade. Acreditamos que a honestidade e o compromisso com os
                 nossos clientes são fundamentais para construir relações de
