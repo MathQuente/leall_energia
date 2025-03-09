@@ -6,12 +6,10 @@ import { ContactsForm } from "../components/ContactsForm";
 export function Contacts(){
     return(
     <>
-        <div
-        style={{ backgroundImage: `url(${worker})` }}
-        className="absolute h-screen bg-cover object-cover w-full bg-center bg-no-repeat">
+        <div className="w-full pt-20 pb-20">
 
             <div className="items-center justify-center h-full p-4 overflow-auto md:flex">
-                <div className=" bg-white shadow-lg rounded-2xl p-6 max-w-5xl w-full">
+                <div className=" bg-white rounded-2xl p-6 max-w-5xl w-full border-2">
                     <h2 className="text-2xl font-semibold text-gray-700 text-left mb-4">Fale Conosco</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <ContactsForm/>
