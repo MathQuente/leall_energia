@@ -23,7 +23,7 @@ export function NavLink({ title, href, footer = false }) {
         to={href}
         className={({ isActive }) => {
           // Classes base comuns
-          let baseClass = 'font-semibold text-lg relative'
+          let baseClass = 'text-gray-950 text-xl font-medium relative'
 
           // Apenas adiciona o pseudo-elemento after se não for footer
           if (!footer) {
@@ -33,20 +33,25 @@ export function NavLink({ title, href, footer = false }) {
               after:duration-300 after:ease-out
             `
           }
-
           if (footer) {
-            // Estilos específicos para footer
-            baseClass += ' text-gray-100 hover:text-[#06abbb] transition-colors'
+            // Estilos base para footer
+            baseClass += ' text-gray-100 bg-clip-text'
+
+            // Adicionar classes de hover
+            baseClass +=
+              ' hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#1196bb] hover:to-[#21256b] transition-colors'
+
             if (isActive) {
-              baseClass += ' !text-[#06abbb] font-bold'
+              baseClass +=
+                ' !text-transparent bg-clip-text bg-gradient-to-r from-[#1196bb] to-[#21256b] font-bold'
             }
           } else if (isScrolled) {
             // Estilos para quando está scrollado (não footer)
             baseClass +=
-              ' bg-gradient-to-r from-[#06b3c2] to-[#0e6bae] bg-clip-text text-transparent'
+              ' bg-gradient-to-r from-[#1196bb] to-[#21256b] bg-clip-text text-transparent'
             baseClass += isActive
-              ? ' after:bg-gradient-to-r after:from-[#06b3c2] after:to-[#0e6bae] after:scale-x-100'
-              : ' after:bg-gradient-to-r after:from-[#06b3c2] after:to-[#0e6bae] after:scale-x-0 hover:after:scale-x-100'
+              ? ' after:bg-gradient-to-r after:from-[#1196bb] after:to-[#21256b] after:scale-x-100'
+              : ' after:bg-gradient-to-r after:from-[#1196bb] after:to-[#21256b] after:scale-x-0 hover:after:scale-x-100'
           } else {
             // Estilos padrão (não footer, não scrollado)
             baseClass += ' text-white'

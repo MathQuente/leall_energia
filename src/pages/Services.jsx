@@ -30,19 +30,17 @@ export function Services(){
         <div className='bg-white mb-10'>
              <div className='bg-white gap-4 mx-1 md:mx-50'>
                 <div className='flex flex-col md:flex-row p-10 items-center justify-center gap-20'>
-                    <div className='flex flex-col items-center justify-center'>
-                        <h1 className="text-3xl font-bold bg-gradient-to-r from-[#1196bb] to-[#21256b] bg-clip-text text-transparent ">Nossos serviços</h1>
+                    <div className='flex flex-col justify-center'>
+                        <h1 className="text-3xl font-bold bg-gradient-to-r from-[#1196bb] to-[#21256b] bg-clip-text text-transparent text-center">Nossos serviços</h1>
                         <h2 className="text-xl text-gray-900 mt-2 -left">Testes de isolação elétrica conforme NR-10 nos seguintes equipamentos:</h2>
-                        <div className=''>
-                            <ul className="text-xl text-gray-900 box-content pt-10">
-                                <li className='mb-4'><MdOutlineCheck className='inline-block text-blue-900'/>Luvas, ferramentas e varas.</li>
-                                <li className='mb-4'><MdOutlineCheck className='inline-block text-blue-900'/>Ponta de prova, capacete e bota.</li>
-                                <li className='mb-4'><MdOutlineCheck className='inline-block text-blue-900'/>Mantas, tapetes e mangotes.</li>
-                                <li className='mb-4'><MdOutlineCheck className='inline-block text-blue-900'/>Aterramento, bastão salv, lança e cesto.</li>
-                                <li className='mb-4'><MdOutlineCheck className='inline-block text-blue-900'/>Banquetas, jampe e bastões isolados.</li>
-                                <li className='mb-4'><MdOutlineCheck className='inline-block text-blue-900'/>Coberturas isoladas.</li>
-                            </ul>
-                        </div>
+                        <ul className="text-xl text-gray-900 box-content pt-10">
+                            <li className='mb-4'><MdOutlineCheck className='inline-block text-blue-900'/>Luvas, ferramentas e varas.</li>
+                            <li className='mb-4'><MdOutlineCheck className='inline-block text-blue-900'/>Ponta de prova, capacete e bota.</li>
+                            <li className='mb-4'><MdOutlineCheck className='inline-block text-blue-900'/>Mantas, tapetes e mangotes.</li>
+                            <li className='mb-4'><MdOutlineCheck className='inline-block text-blue-900'/>Aterramento, bastão salv, lança e cesto.</li>
+                            <li className='mb-4'><MdOutlineCheck className='inline-block text-blue-900'/>Banquetas, jampe e bastões isolados.</li>
+                            <li className='mb-4'><MdOutlineCheck className='inline-block text-blue-900'/>Coberturas isoladas.</li>
+                        </ul>
                     </div>
                     <div className="flex justify-end mr-10">
                         <img src={nr_10} className="rounded-lg shadow-lg hidden md:flex max-h-120 max-w-120"/>
