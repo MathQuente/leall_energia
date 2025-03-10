@@ -15,7 +15,7 @@ export function Header({ backgroundImage }) {
         return (
           <div className="text-center text-white">
             <SlideInWhenVisible direction="left-header">
-              <h1 className="text-8xl text-[#06b3c2] font-bold mb-4">
+              <h1 className="text-8xl text-transparent bg-clip-text bg-gradient-to-r from-[#1196bb] to-[#21256b] font-bold mb-4">
                 Bem-vindo
               </h1>
             </SlideInWhenVisible>
@@ -30,7 +30,7 @@ export function Header({ backgroundImage }) {
         return (
           <div className="flex flex-col items-center">
             <h1 className="text-5xl text-white font-semibold">Contato</h1>
-            <p className="text-[#06b3c2] font-semibold text-2xl">
+            <p className="text-transparent bg-clip-text bg-gradient-to-r from-[#1196bb] to-[#21256b] font-semibold text-2xl">
               Tem um projeto para nós? Vamos conversar.
             </p>
           </div>

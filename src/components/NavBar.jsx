@@ -65,7 +65,7 @@ export function NavBar() {
             <div
               className={`md:hidden flex items-center p-2 mr-2 ${
                 isScrolled
-                  ? 'bg-gradient-to-r from-[#06b3c2] to-[#0e6bae]'
+                  ? 'bg-gradient-to-b from-[#1196bb] to-[#21256b]'
                   : 'bg-gray-200/30'
               }`}
             >
@@ -100,7 +100,7 @@ export function NavBar() {
           <div className="flex justify-end items-center mb-6">
             <button
               onClick={toggleSidebar}
-              className="text-gray-700 hover:text-gray-900 focus:outline-none"
+              className="text-white bg-gradient-to-b from-[#1196bb] to-[#21256b] p-1 hover:text-gray-900 focus:outline-none"
             >
               <FiX size={24} />
             </button>
@@ -123,11 +123,11 @@ export function NavBar() {
           <div className="mt-8 space-y-3">
             <div className="flex items-center space-x-2 text-gray-700">
               <MdOutlineEmail size={20} className="text-green-500" />
-              <span>comercial@teclab.com.br</span>
+              <span>testes@leallenergia.com</span>
             </div>
             <div className="flex items-center space-x-2 text-gray-700">
               <FaWhatsapp size={20} className="text-green-500" />
-              <span>(31) 97501-4130</span>
+              <span>(85) 8430-0302</span>
             </div>
           </div>
         </div>

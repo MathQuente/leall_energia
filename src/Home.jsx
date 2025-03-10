@@ -28,10 +28,11 @@ export function Home() {
   return (
     <>
       <div className="flex flex-col overflow-x-hidden">
+        <FloatingButton />
         <div className="flex justify-center md:gap-20 w-full md:pt-16 px-10">
           <div className="md:w-1/3 flex flex-col flex-wrap gap-4 pt-10">
             <SlideInWhenVisible direction="left">
-              <h1 className="text-4xl text-[#06b3c2] font-semibold">
+              <h1 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#1196bb] to-[#21256b] font-semibold">
                 Sobre nós
               </h1>
             </SlideInWhenVisible>
@@ -62,11 +63,10 @@ export function Home() {
               className="w-[423px] h-[800px] object-cover"
             />
           </div>
-          <FloatingButton />
 
           <div className="flex flex-col flex-wrap item gap-6">
             <SlideInWhenVisible direction="right">
-              <h2 className="text-4xl text-[#06b3c2] font-semibold">
+              <h2 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#1196bb] to-[#21256b] font-semibold">
                 Nossos Princípios
               </h2>
             </SlideInWhenVisible>
@@ -116,7 +116,9 @@ export function Home() {
           </div>
         </div>
         <div className="flex flex-col items-center justify-center w-full bg-gray-100 p-10">
-          <h1 className="text-4xl text-[#06b3c2] mb-10">Nossos Clientes</h1>
+          <h1 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#1196bb] to-[#21256b] mb-10">
+            Nossos Clientes
+          </h1>
           <div className="w-full max-w-6xl">
             <Swiper
               modules={[Navigation, Pagination, Autoplay]}
