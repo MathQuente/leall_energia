@@ -3,10 +3,10 @@ import { ContactsForm } from '../components/ContactsForm'
 export function Contacts() {
   return (
     <>
-      <div className="w-full bg-[#f5f5f5] py-12 px-4 md:px-8 lg:px-20">
+      <div className="w-full bg-[#f5f5f5] py-20 px-10 md:px-8 lg:px-20">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10">
           <div className="w-full md:w-1/2 flex flex-col gap-4">
-            <h2 className="text-2xl font-semibold text-[#06b3c2]">
+            <h2 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#1196bb] to-[#21256b]">
               Como nos encontrar
             </h2>
 

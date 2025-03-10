@@ -6,7 +6,7 @@ export function TopBar() {
     <div className="w-full md:flex items-center justify-end px-50 gap-4 pt-2 hidden">
       <div className="flex items-center gap-2">
         <MdOutlineEmail className="text-white size-5" />
-        <p className="text-white text-sm">comercial@teclab.com.br</p>
+        <p className="text-white text-sm">testes@leallenergia.com</p>
       </div>
       <div className="flex items-center gap-2">
         <FaWhatsapp className="text-white size-5" />

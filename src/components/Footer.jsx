@@ -1,4 +1,4 @@
-import { MdOutlineEmail } from 'react-icons/md'
+import { MdEmail } from 'react-icons/md'
 import logo from '../assets/logo.png'
 import { FaWhatsapp } from 'react-icons/fa'
 import { NavLink } from './NavLink'
@@ -26,15 +26,15 @@ export function Footer() {
           <h3 className="text-xl font-semibold mb-4 text-white">
             Faça contato
           </h3>
-          <div className="flex items-center mb-2">
-            <MdOutlineEmail />
+          <div className="flex items-center mb-2 gap-1">
+            <MdEmail className="text-white text-lg" />
             <p className="hover:underline text-white">
-              comercial@teclab.com.br
+              testes@leallenergia.com
             </p>
           </div>
-          <div className="flex items-center mb-2">
-            <FaWhatsapp />
-            <p className="hover:underline text-white">(31) 9 7501 - 4130</p>
+          <div className="flex items-center mb-2 gap-2">
+            <FaWhatsapp className="text-white" />
+            <p className="hover:underline text-white">(85) 8430-0302</p>
           </div>
           <p className="text-center text-white">
             R. Antônio Pereira do Nascimento, 160
