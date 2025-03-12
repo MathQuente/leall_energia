@@ -15,28 +15,32 @@ export function Header({ backgroundImage }) {
         return (
           <div className="text-center text-white">
             <SlideInWhenVisible direction="left-header">
-              <h1 className="text-8xl text-transparent bg-clip-text bg-gradient-to-r from-[#1196bb] to-[#21256b] font-bold mb-4">
+              <h1 className="text-8xl text-white">
                 Bem-vindo
               </h1>
             </SlideInWhenVisible>
             <SlideInWhenVisible direction="right-header">
-              <p className="text-5xl font-medium">Leall Energia</p>
+              <p className="text-9xl text-transparent bg-clip-text bg-gradient-to-r from-[#1196bb] to-[#21256b] font-bold mb-4">Leall Energia</p>
             </SlideInWhenVisible>
           </div>
         )
       case '/about':
-        return <h1 className="text-4xl text-white">Sobre Nós</h1>
+        return <h1 className="text-6xl text-white font-semibold">Sobre Nós</h1>
       case '/contato':
         return (
           <div className="flex flex-col items-center">
-            <h1 className="text-5xl text-white font-semibold">Contato</h1>
-            <p className="text-transparent bg-clip-text bg-gradient-to-r from-[#1196bb] to-[#21256b] font-semibold text-2xl">
+            <h1 className="text-6xl text-white font-semibold">Contato</h1>
+            <p className="text-white font-semibold text-2xl">
               Tem um projeto para nós? Vamos conversar.
             </p>
           </div>
         )
+      case '/nr10':
+        return <h1 className="text-6xl text-white font-semibold">NR-10</h1>
+      case '/servicos':
+        return <h1 className="text-6xl text-white font-semibold">Serviços</h1>
       default:
-        return <h1 className="text-4xl text-white">Página</h1>
+        return <h1 className="text-6xl text-white font-semibold">Página</h1>
     }
   }
 

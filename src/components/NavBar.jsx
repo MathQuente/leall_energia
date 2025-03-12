@@ -53,11 +53,13 @@ export function NavBar() {
             {/* Menu para desktop */}
             <div className="hidden md:flex">
               <ul className="flex gap-4 items-center">
-                <NavLink title="Inicio" href="/" />
+                <NavLink title="Sobre Nós" href="/" />
                 <div className="bg-gray-500 w-[1px] h-6"></div>
-                <NavLink title="Contato" href="/contato" />
+                <NavLink title="NR-10" href="/nr10" />
                 <div className="bg-gray-500 w-[1px] h-6"></div>
                 <NavLink title="Serviços" href="/servicos" />
+                <div className="bg-gray-500 w-[1px] h-6"></div>
+                <NavLink title="Contato" href="/contato" />
               </ul>
             </div>
 
@@ -110,6 +112,9 @@ export function NavBar() {
           <div className="space-y-4">
             <ul className="py-2 border-b border-gray-200">
               <NavLink title="Inicio" href="/" footer />
+            </ul>
+            <ul className="py-2 border-b border-gray-200">
+              <NavLink title="NR-10" href="/nr10" footer />
             </ul>
             <ul className="py-2 border-b border-gray-200">
               <NavLink title="Contato" href="/contato" footer />
