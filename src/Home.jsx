@@ -10,7 +10,6 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import { FloatingButton } from './components/FloatingButton'
 
 const images = [
   { id: 1, url: '../src/assets/adcd.jpg' },
@@ -28,7 +27,6 @@ export function Home() {
   return (
     <>
       <div className="flex flex-col overflow-x-hidden">
-        <FloatingButton />
         <div className="flex justify-center md:gap-20 w-full md:pt-16 px-10">
           <div className="md:w-1/3 flex flex-col flex-wrap gap-4 pt-10">
             <SlideInWhenVisible direction="left">
@@ -46,25 +44,25 @@ export function Home() {
               clientes, garantindo mais praticidade e eficiência.
             </p>
           </div>
-          <div>
+          <div className="lg:block hidden">
             <img
               src={logo}
-              className="md:w-[565px] md:h-[396px] md:block hidden"
+              className="md:w-[565px] md:h-[396px] lg:block hidden"
               alt=""
             />
           </div>
         </div>
 
-        <div className="flex w-full px-10 md:pt-16 md:max-w-[1290px] md:mx-auto md:px-4 md:gap-20 md:py-14 mb-10 mt-10">
-          <div className="w-full md:flex justify-center hidden">
+        <div className="flex w-full px-10 md:pt-16 lg:max-w-[1050px] xl:max-w-[1150px] 2xl:max-w-[1280px] md:mx-auto md:px-4 md:gap-20 md:py-14 mb-10 mt-10">
+          <div className="w-full lg:flex justify-center hidden">
             <img
               src={logo}
               alt="TecLab Logo"
-              className="w-[423px] h-[800px] object-cover"
+              className="w-[423px] h-[800px] object-cover md:hidden lg:block"
             />
           </div>
 
-          <div className="flex flex-col flex-wrap item gap-6">
+          <div className="flex flex-col flex-wrap item gap-6 px-4 lg:px-0">
             <SlideInWhenVisible direction="right">
               <h2 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#1196bb] to-[#21256b] font-semibold">
                 Nossos Princípios

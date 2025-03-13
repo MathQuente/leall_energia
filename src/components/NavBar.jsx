@@ -37,7 +37,7 @@ export function NavBar() {
   return (
     <>
       <nav
-        className={`fixed w-full z-40 transition-all duration-300 h-40 flex flex-row items-center justify-between md:justify-evenly ${
+        className={`fixed w-full z-40 transition-all duration-300 h-40 flex flex-row items-center justify-between md:justify-evenly select-none ${
           isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
         }`}
       >
@@ -48,22 +48,22 @@ export function NavBar() {
           </a>
         </div>
 
-            {/* Menu para desktop */}
-            <div className="hidden md:flex">
-              <ul className="flex gap-4 items-center">
-                <NavLink title="Sobre Nós" href="/" />
-                <div className="bg-gray-500 w-[1px] h-6"></div>
-                <NavLink title="NR-10" href="/nr10" />
-                <div className="bg-gray-500 w-[1px] h-6"></div>
-                <NavLink title="Serviços" href="/servicos" />
-                <div className="bg-gray-500 w-[1px] h-6"></div>
-                <NavLink title="Contato" href="/contato" />
-              </ul>
-            </div>
+        {/* Menu para desktop */}
+        <div className="hidden md:flex">
+          <ul className="flex gap-4 items-center">
+            <NavLink title="Sobre Nós" href="/" />
+            <div className="bg-gray-500 w-[1px] h-6"></div>
+            <NavLink title="NR-10" href="/nr10" />
+            <div className="bg-gray-500 w-[1px] h-6"></div>
+            <NavLink title="Serviços" href="/servicos" />
+            <div className="bg-gray-500 w-[1px] h-6"></div>
+            <NavLink title="Contato" href="/contato" />
+          </ul>
+        </div>
 
         {/* Botão do menu lateral para mobile */}
         <div
-          className={`md:hidden flex items-center p-2 mr-2 ${
+          className={`md:hidden flex items-center p-2 mr-4 ${
             isScrolled
               ? 'bg-gradient-to-b from-[#1196bb] to-[#21256b]'
               : 'bg-gray-200/30'
@@ -110,10 +110,10 @@ export function NavBar() {
               <NavLink title="Inicio" mobile href="/" />
             </ul>
             <ul className="py-2 border-b border-gray-200">
-              <NavLink title="NR-10" href="/nr10" footer />
+              <NavLink title="NR-10" mobile href="/nr10" />
             </ul>
             <ul className="py-2 border-b border-gray-200">
-              <NavLink title="Contato" href="/contato" footer />
+              <NavLink title="Contato" mobile href="/contato" />
             </ul>
             <ul className="py-2 border-b border-gray-200">
               <NavLink title="Serviços" mobile href="/servicos" />
