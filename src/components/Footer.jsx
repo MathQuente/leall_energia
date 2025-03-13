@@ -49,6 +49,8 @@ export function Footer() {
           <ul className="text-center">
             <NavLink title="Inicio" href="/" footer />
 
+            <NavLink title="NR-10" href="/nr10" footer />
+
             <NavLink title="Contato" href="/contato" footer />
 
             <NavLink title="Serviços" href="/servicos" footer />

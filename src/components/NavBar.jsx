@@ -48,16 +48,18 @@ export function NavBar() {
           </a>
         </div>
 
-        {/* Menu para desktop */}
-        <div className="hidden md:flex">
-          <ul className="flex gap-4 items-center">
-            <NavLink title="Inicio" href="/" />
-            <div className="bg-gray-500 w-[1px] h-6"></div>
-            <NavLink title="Contato" href="/contato" />
-            <div className="bg-gray-500 w-[1px] h-6"></div>
-            <NavLink title="Serviços" href="/servicos" />
-          </ul>
-        </div>
+            {/* Menu para desktop */}
+            <div className="hidden md:flex">
+              <ul className="flex gap-4 items-center">
+                <NavLink title="Sobre Nós" href="/" />
+                <div className="bg-gray-500 w-[1px] h-6"></div>
+                <NavLink title="NR-10" href="/nr10" />
+                <div className="bg-gray-500 w-[1px] h-6"></div>
+                <NavLink title="Serviços" href="/servicos" />
+                <div className="bg-gray-500 w-[1px] h-6"></div>
+                <NavLink title="Contato" href="/contato" />
+              </ul>
+            </div>
 
         {/* Botão do menu lateral para mobile */}
         <div
@@ -108,7 +110,10 @@ export function NavBar() {
               <NavLink title="Inicio" mobile href="/" />
             </ul>
             <ul className="py-2 border-b border-gray-200">
-              <NavLink title="Contato" mobile href="/contato" />
+              <NavLink title="NR-10" href="/nr10" footer />
+            </ul>
+            <ul className="py-2 border-b border-gray-200">
+              <NavLink title="Contato" href="/contato" footer />
             </ul>
             <ul className="py-2 border-b border-gray-200">
               <NavLink title="Serviços" mobile href="/servicos" />
