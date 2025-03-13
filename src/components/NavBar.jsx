@@ -37,18 +37,16 @@ export function NavBar() {
   return (
     <>
       <nav
-        className={`fixed w-full z-40 transition-all duration-300 ${
+        className={`fixed w-full z-40 transition-all duration-300 h-40 flex flex-row items-center justify-between md:justify-evenly ${
           isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
         }`}
       >
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="flex justify-between items-center">
-            {/* Logo */}
-            <div>
-              <a href="/">
-                <img src={logo} className="size-40" alt="Logo" />
-              </a>
-            </div>
+        {/* Logo */}
+        <div>
+          <a href="/">
+            <img src={logo} className="w-52 h-64" alt="Logo" />
+          </a>
+        </div>
 
             {/* Menu para desktop */}
             <div className="hidden md:flex">
@@ -63,22 +61,20 @@ export function NavBar() {
               </ul>
             </div>
 
-            {/* Botão do menu lateral para mobile */}
-            <div
-              className={`md:hidden flex items-center p-2 mr-2 ${
-                isScrolled
-                  ? 'bg-gradient-to-b from-[#1196bb] to-[#21256b]'
-                  : 'bg-gray-200/30'
-              }`}
-            >
-              <button
-                onClick={toggleSidebar}
-                className="text-white text-4xl font-bold hover:text-gray-900 focus:outline-none"
-              >
-                <FiMenu size={24} />
-              </button>
-            </div>
-          </div>
+        {/* Botão do menu lateral para mobile */}
+        <div
+          className={`md:hidden flex items-center p-2 mr-2 ${
+            isScrolled
+              ? 'bg-gradient-to-b from-[#1196bb] to-[#21256b]'
+              : 'bg-gray-200/30'
+          }`}
+        >
+          <button
+            onClick={toggleSidebar}
+            className="text-white text-4xl font-bold hover:text-gray-900 focus:outline-none"
+          >
+            <FiMenu size={24} />
+          </button>
         </div>
       </nav>
 
@@ -111,7 +107,7 @@ export function NavBar() {
           {/* Links do menu */}
           <div className="space-y-4">
             <ul className="py-2 border-b border-gray-200">
-              <NavLink title="Inicio" href="/" footer />
+              <NavLink title="Inicio" mobile href="/" />
             </ul>
             <ul className="py-2 border-b border-gray-200">
               <NavLink title="NR-10" href="/nr10" footer />
@@ -120,7 +116,7 @@ export function NavBar() {
               <NavLink title="Contato" href="/contato" footer />
             </ul>
             <ul className="py-2 border-b border-gray-200">
-              <NavLink title="Serviços" href="/servicos" footer />
+              <NavLink title="Serviços" mobile href="/servicos" />
             </ul>
           </div>
 

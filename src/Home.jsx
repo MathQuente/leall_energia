@@ -73,7 +73,7 @@ export function Home() {
 
             <div className="flex-col">
               <div className="flex items-center gap-4">
-                <FaHome className="text-[#06b3c2] size-8" />
+                <FaHome className="text-[#1e4480] size-8" />
                 <p className="text-xl text-[#333333] ">Missão</p>
               </div>
               <p className="md:ml-11">
@@ -88,7 +88,7 @@ export function Home() {
 
             <div className="flex-col">
               <div className="flex items-center gap-4">
-                <IoEyeSharp className="text-[#06b3c2] size-8" />
+                <IoEyeSharp className="text-[#1e4480] size-8" />
                 <p className="text-xl text-[#333333]">Visão</p>
               </div>
               <p className="md:ml-11">
@@ -101,7 +101,7 @@ export function Home() {
 
             <div className="flex-col">
               <div className="flex gap-2">
-                <HiMiniHandRaised className="text-[#06b3c2] size-8" />
+                <HiMiniHandRaised className="text-[#1e4480] size-8" />
                 <p className="text-xl text-[#333333]">Valores</p>
               </div>
               <p className="md:ml-11">
