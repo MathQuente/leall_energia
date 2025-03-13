@@ -13,30 +13,30 @@ export function Footer() {
       }}
     >
       {/* Conteúdo do footer */}
-      <div className="flex flex-col gap-10 md:flex-row md:justify-around md:items-center">
+      <div className="flex flex-col gap-10 h-[300px] md:flex-row md:justify-around md:items-center">
         {/* Coluna 1 - Logo e CNPJ */}
         <div className="flex flex-col items-center md:items-start">
-          <img src={logo} alt="TecLab Logo" className="size-60" />
+          <img src={logo} alt="TecLab Logo" className="w-60 h-72" />
           {/* <p className="text-sm">Priorizando a Qualidade</p>
           <p className="text-sm mt-4">CNPJ: 41.766.131/0001-61</p> */}
         </div>
 
         {/* Coluna 2 - Informações de contato */}
-        <div className="flex flex-col items-center justify-center md:items-center select-none">
-          <h3 className="text-xl font-semibold mb-4 text-white">
-            Faça contato
-          </h3>
-          <div className="flex items-center mb-2 gap-1">
-            <MdEmail className="text-white text-lg" />
-            <p className="hover:underline text-white">
-              testes@leallenergia.com
-            </p>
+        <div className="flex flex-col items-center justify-center md:items-center select-none gap-2">
+          <h3 className="text-xl font-semibold  text-white">Faça contato</h3>
+          <div className="flex flex-col items-center">
+            <div className="flex items-center mb-2 gap-1">
+              <MdEmail className="text-white text-lg" />
+              <p className="hover:underline text-white text-md">
+                testes@leallenergia.com
+              </p>
+            </div>
+            <div className="flex items-center mb-2 gap-2">
+              <FaWhatsapp className="text-white" />
+              <p className="hover:underline text-white">(85) 8430-0302</p>
+            </div>
           </div>
-          <div className="flex items-center mb-2 gap-2">
-            <FaWhatsapp className="text-white" />
-            <p className="hover:underline text-white">(85) 8430-0302</p>
-          </div>
-          <p className="text-center text-white">
+          <p className="text-center text-white text-md">
             R. Antônio Pereira do Nascimento, 160
             <br />
             Luzardo Viana. Maracanaú - CE.

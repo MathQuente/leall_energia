@@ -45,8 +45,8 @@ export function Header({ backgroundImage }) {
       <header
         className={`relative flex flex-col overflow-x-hidden ${
           isHomePage
-            ? 'min-h-screen bg-cover bg-center bg-no-repeat'
-            : 'min-h-[350px] bg-cover'
+            ? 'min-h-[750px] md:min-h-screen bg-cover bg-center bg-no-repeat'
+            : 'min-h-[470px] bg-cover'
         }`}
         style={{
           backgroundImage: backgroundImage ? `url(${backgroundImage})` : 'none'
