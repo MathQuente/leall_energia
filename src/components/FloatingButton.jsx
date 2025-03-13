@@ -45,7 +45,7 @@ export function FloatingButton({
   }
 
   return (
-    <div className="fixed bottom-8 right-8 z-40 flex flex-col items-end">
+    <div className="fixed bottom-10 right-5 md:bottom-8 md:right-8 z-40 flex flex-col items-end">
       {isOpen ? (
         <div className="bg-[#f7fdf9] rounded-3xl shadow-lg overflow-hidden w-64 md:w-[400px] h-[272px] relative z-50">
           {/* Header */}

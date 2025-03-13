@@ -13,7 +13,7 @@ export function Footer() {
       }}
     >
       {/* Conteúdo do footer */}
-      <div className="flex flex-col gap-10 h-[300px] md:flex-row md:justify-around md:items-center">
+      <div className="flex flex-col gap-10 md:h-[300px] md:flex-row md:justify-around md:items-center">
         {/* Coluna 1 - Logo e CNPJ */}
         <div className="flex flex-col items-center md:items-start">
           <img src={logo} alt="TecLab Logo" className="w-60 h-72" />
@@ -27,13 +27,11 @@ export function Footer() {
           <div className="flex flex-col items-center">
             <div className="flex items-center mb-2 gap-1">
               <MdEmail className="text-white text-lg" />
-              <p className="hover:underline text-white text-md">
-                testes@leallenergia.com
-              </p>
+              <p className="text-white text-md">testes@leallenergia.com</p>
             </div>
             <div className="flex items-center mb-2 gap-2">
               <FaWhatsapp className="text-white" />
-              <p className="hover:underline text-white">(85) 8430-0302</p>
+              <p className="text-white">(85) 8430-0302</p>
             </div>
           </div>
           <p className="text-center text-white text-md">
@@ -44,7 +42,7 @@ export function Footer() {
         </div>
 
         {/* Coluna 3 - Navegação Rápida */}
-        <div className="flex flex-col items-center md:items-center select-none mb-10">
+        <div className="flex flex-col items-center md:items-center select-none mb-14 md:mb-0">
           <h3 className="text-xl font-semibold text-white">Navegação Rápida</h3>
           <ul className="text-center">
             <NavLink title="Inicio" href="/" footer />

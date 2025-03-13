@@ -15,12 +15,12 @@ export function Header({ backgroundImage }) {
         return (
           <div className="text-center text-white">
             <SlideInWhenVisible direction="left-header">
-              <h1 className="text-8xl text-white">
-                Bem-vindo
-              </h1>
+              <h1 className="text-4xl md:text-8xl text-white">Bem-vindo</h1>
             </SlideInWhenVisible>
             <SlideInWhenVisible direction="right-header">
-              <p className="text-9xl text-transparent bg-clip-text bg-gradient-to-r from-[#1196bb] to-[#21256b] font-bold mb-4">Leall Energia</p>
+              <p className="text-6xl leading-tight md:text-9xl text-transparent bg-clip-text bg-gradient-to-r from-[#1196bb] to-[#21256b] font-bold mb-4">
+                Leall Energia
+              </p>
             </SlideInWhenVisible>
           </div>
         )
