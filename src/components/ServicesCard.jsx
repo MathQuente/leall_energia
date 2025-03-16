@@ -1,5 +1,5 @@
 
-export function ServicesGrid(prop){
+export function ServicesCard(prop){
     return (
     <div className="max-w-md mx-auto py-8 px-6 bg-gray-100 rounded-lg text-center">
         <div className="flex flex-col items-center">

@@ -44,7 +44,7 @@ export function Footer() {
       className="bg-cover bg-center"
       style={{
         backgroundImage:
-          "linear-gradient(to right, rgba(19,68,111,0.9) 80%, rgba(150,150,150,1) 60%), url('../src/assets/trabalhador.jpg')"
+          "linear-gradient(to right, rgba(19,68,111,0.9) 80%, rgba(150,150,150,1) 60%), url('../src/assets/background.jpg')"
       }}
     >
       <div className="flex flex-col gap-10 md:h-[300px] md:flex-row md:justify-around md:items-center">
