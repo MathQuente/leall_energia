@@ -25,10 +25,12 @@ export function ContactsForm() {
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
+          to_name: 'Equipe Leall Energia',
           from_name: data.nome,
           from_email: data.email,
           telefone: data.telefone,
-          message: data.mensagem
+          message: data.mensagem,
+          reply_to: data.email
         },
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
@@ -50,7 +52,7 @@ export function ContactsForm() {
 
   return (
     <>
-      <div className="w-full md:w-1/2 flex flex-col gap-6">
+      <div className="w-full lg:w-1/2 flex flex-col gap-6">
         <h2 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#1196bb] to-[#21256b]">
           Envie sua mensagem por aqui.
         </h2>
