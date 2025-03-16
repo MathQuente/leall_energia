@@ -8,17 +8,24 @@ export function Header({ backgroundImage }) {
 
   const isHomePage = location.pathname === '/'
 
-  // Função para determinar o conteúdo dinâmico com base na rota
   const renderHeaderContent = () => {
     switch (location.pathname) {
       case '/':
         return (
-          <div className="text-center text-white">
+          <div className="text-center text-white select-none">
             <SlideInWhenVisible direction="left-header">
-              <h1 className="text-4xl md:text-8xl text-white">Bem-vindo</h1>
+              <h1
+                className="text-4xl md:text-7xl lg:text-8xl text-white"
+                style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 1)' }}
+              >
+                Bem-vindo
+              </h1>
             </SlideInWhenVisible>
             <SlideInWhenVisible direction="right-header">
-              <p className="text-6xl leading-tight md:text-9xl text-transparent bg-clip-text bg-gradient-to-r from-[#1196bb] to-[#21256b] font-bold mb-4">
+              <p
+                className="text-6xl md:text-8xl lg:text-9xl leading-tight text-white font-bold mb-4"
+                style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 1)' }}
+              >
                 Leall Energia
               </p>
             </SlideInWhenVisible>
@@ -49,7 +56,7 @@ export function Header({ backgroundImage }) {
       <header
         className={`relative flex flex-col overflow-x-hidden ${
           isHomePage
-            ? 'min-h-[750px] md:min-h-screen bg-cover bg-center bg-no-repeat'
+            ? 'min-h-[750px] md:min-h-screen bg-top lg:bg-center bg-no-repeat md:bg-[length:var(--minha-tamanho-bg)]'
             : 'min-h-[470px] bg-cover'
         }`}
         style={{
