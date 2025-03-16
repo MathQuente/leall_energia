@@ -1,6 +1,5 @@
-import { ServicesGrid } from '../components/ServicesGrid';
+import { ServicesCard } from '../components/ServicesCard';
 
-import trabalhador from '../assets/trabalhador.jpg'
 import luvas_iso from '../assets/services-img/luvas-iso.png'
 import ferramentas_iso from '../assets/services-img/ferramentas-iso.png'
 import vara_iso from '../assets/services-img/vara-iso.png'
@@ -19,13 +18,8 @@ import bastoes_iso from '../assets/services-img/bastoes_iso.png'
 import cobertura_circulares from '../assets/services-img/cobertura_circulares.png'
 import cobertura_rigidas from '../assets/services-img/cobertura_rigidas.png'
 import cobertura_borracha from '../assets/services-img/cobertura_borracha.png'
-import fiorino from '../assets/services-img/fiorino.jpeg'
-import maleta_nr10 from '../assets/services-img/maleta_nr10.jpg'
-import leall_note from '../assets/services-img/leall_note.png'
-import laudo_desc from '../assets/services-img/laudo_desc.jpg'
 
-import nr_10 from '../assets/nr-10.jpg'
-
+import equipamentos from '../assets/equipamentos.jpg'
 
 import { MdOutlineCheck } from 'react-icons/md';
 
@@ -48,22 +42,8 @@ export function Services(){
                         </ul>
                     </div>
                     <div className="flex justify-end mr-10">
-                        <img src={nr_10} className="rounded-lg shadow-lg hidden md:flex max-h-120 max-w-120"/>
+                        <img src={equipamentos} className="rounded-lg hidden md:flex max-h-120 max-w-120"/>
                     </div>
-                </div>
-                <div className='md:flex md:flex-row sm:hidden justify-center md:mx-2 lg:mx-30'>
-                    <ServicesGrid 
-                    title="Possibilidade de ensaios elétricos realizados no endereço do cliente." 
-                    img={fiorino}/>
-                    <ServicesGrid 
-                        title="Instrumentos calibrados com rastreabilidade pela RBC - INMETRO." 
-                        img={maleta_nr10}/>
-                    <ServicesGrid 
-                        title="Etiquetas de validação inseridas nos objetos testados." 
-                        img={leall_note}/>
-                    <ServicesGrid 
-                        title="Emissão de laudos de ensaios elétricos em conformidade com a NR10." 
-                        img={laudo_desc}/>
                 </div>
 
                 <hr className='mx-5 lg:mx-20 md:mx-10 md:mt-10 text-blue-900'/>
@@ -71,75 +51,75 @@ export function Services(){
 
                 <span className='grid grid-cols-1 md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 -left bg-white lg:ml-20 lg:mr-20 mx-5'>
                     
-                    <ServicesGrid 
+                    <ServicesCard 
                         title="Ensaio de tensão elétrica aplicada em Luvas Isolantes de Borracha." 
                         subtitle="NBR 16295: Luvas de material isolante."
                         img={luvas_iso}/>
-                    <ServicesGrid 
+                    <ServicesCard 
                         title="Ensaios de tensão elétrica aplicada em Ferramentas Manuais Isoladas." 
                         subtitle="NBR 9699: Ferramentas manuais - Isolação elétrica até 1000Vca e 1500Vcc."
                         img={ferramentas_iso}/>
-                    <ServicesGrid 
+                    <ServicesCard 
                         title="Ensaios de tensão elétrica aplicada em Vara de Manobra Isolante." 
                         subtitle="ASTM-F 711: Especificação padrão para vara de plástico reforçado com fibra de vidro (FRP) e tubo usado em ferramentas de linha ao viva."
                         img={vara_iso}/>
-                    <ServicesGrid 
+                    <ServicesCard 
                         title="Ensaio de tensão elétrica aplicada em Pontas de Prova." 
                         subtitle="IEC 61010-1:2010/AMD1:2016: Requisitos de segurança para equipamentos elétricos para medição, controle e uso em laboratório."
                         img={pontas_prova}/>
-                    <ServicesGrid 
+                    <ServicesCard 
                         title="Ensaios de tensão elétrica aplicada em Capacete de Proteção." 
                         subtitle="ABNT-NBR 8221: Capacete de segurança para uso ocupacional - Especificação e método de ensaio."
                         img={capacete_prot}/>
-                    <ServicesGrid 
+                    <ServicesCard 
                         title="Ensaios de tensão elétrica aplicada em Calçado de Proteção." 
                         subtitle="ABNT-NBR 16603: Equipamento de proteção individual - Calçado isolante elétrico para trabalhos em instalações elétricas de baixa tensão até 500 V em ambiente seco - Requisitos, métodos e ensaios."
                         img={calcado_prot}/>
-                    <ServicesGrid 
+                    <ServicesCard 
                         title="Ensaio de tensão elétrica aplicada em Mantas Isolantes de Borracha." 
                         subtitle="ASTM-D 1048: Especificação padrão para mantas isolantes de borracha."
                         img={manta_iso}/>
-                    <ServicesGrid 
+                    <ServicesCard 
                         title="Ensaios de tensão elétrica aplicada em Tapetes e Estrados Isolantes." 
                         subtitle="ASTM-D 178: Especificação padrão para tapete isolante de borracha."
                         img={tapete_iso}/>
-                    <ServicesGrid 
+                    <ServicesCard 
                         title="Ensaio de tensão elétrica aplicada em Mangotes Isolantes de Borracha." 
                         subtitle="ABNT-NBR 10623: Mangas Isolantes de Borracha."
                         img={mangote_iso}/>
-                    <ServicesGrid 
+                    <ServicesCard 
                         title="Ensaio de tensão elétrica aplicada em Aterramento Temporário." 
                         subtitle="ASTM-F 855: Especificações padrão para aterramento de proteção temporário a ser usado em linhas/equipamentos de energia elétrica desenergizados."
                         img={aterramento_temporario}/>
-                    <ServicesGrid 
+                    <ServicesCard 
                         title="Ensaios de tensão elétrica aplicada em Bastão de Resgate." 
                         subtitle="ASTM-F 711: Especificação padrão para vara de plástico reforçado com fibra de vidro (FRP) e tubo usado em ferramentas de linha viva."
                         img={bastao_resgate}/>
-                    <ServicesGrid 
+                    <ServicesCard 
                         title="Ensaios de tensão elétrica aplicada em Laça e Cesto Aéreo Isolados." 
                         subtitle="ANSI-SIA A.92.2: Dispositivos Aéreos Elevadores e Rotativos Montados em Veículos (Unidades Isoladas Abaixo de 69 kV)."
                         img={cesto_iso}/>
-                    <ServicesGrid 
+                    <ServicesCard 
                         title="Ensaios de tensão elétrica aplicada em Banqueta Isolante." 
                         subtitle="ASTM-F 712: Métodos de teste padrão para equipamentos de proteção plástica eletricamente isolantes para proteção de trabalhadores."
                         img={banqueta_iso}/>
-                    <ServicesGrid 
+                    <ServicesCard 
                         title="Ensaios de tensão elétrica aplicada em Cabos para Jumpe Provisório." 
                         subtitle="ABNT-NBR 11857: Cabo Protegido para Jumpe Provisório para Trabalhos em Redes Aéreas Energizadas até 15 kV. "
                         img={cabos_jumpe}/>
-                    <ServicesGrid 
+                    <ServicesCard 
                         title="Ensaios de tensão elétrica aplicada em Bastões Isolados." 
                         subtitle="ASTM-F 711: Especificação padrão para vara de plástico reforçado com fibra de vidro (FRP) e tubo usado em ferramentas de linha viva."
                         img={bastoes_iso}/>
-                    <ServicesGrid 
+                    <ServicesCard 
                         title="Ensaio de tensão elétrica aplicada em Coberturas Circulares para Linha Viva." 
                         subtitle="ASTM-F 712: Métodos de teste padrão para equipamentos de proteção plástica eletricamente isolantes para proteção de trabalhadores."
                         img={cobertura_circulares}/>
-                    <ServicesGrid 
+                    <ServicesCard 
                         title="Ensaios de tensão elétrica aplicada em Coberturas Rígidas para Linha Viva." 
                         subtitle="ASTM-F 712: Métodos de teste padrão para equipamentos de proteção plástica eletricamente isolantes para proteção de trabalhadores."
                         img={cobertura_rigidas}/>
-                    <ServicesGrid 
+                    <ServicesCard 
                         title="Ensaios de tensão elétrica aplicada em Coberturas de Borracha para Linha Viva." 
                         subtitle="ASTM-D 1050: Especificação padrão para mangueira de linha isolante de borracha."
                         img={cobertura_borracha}/>
