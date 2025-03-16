@@ -1,6 +1,5 @@
 import { MdOutlineEmail } from 'react-icons/md'
-import logo1 from '../assets/logo-branco.png'
-import logo2 from '../assets/logo.png'
+import logo from '../assets/logo.png'
 
 import { FaWhatsapp } from 'react-icons/fa'
 import { NavLink } from './NavLink'
@@ -11,20 +10,8 @@ import { useLocation } from 'react-router'
 export function NavBar() {
   const [isScrolled, setIsScrolled] = useState(window.scrollY > 0)
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
-  const [isMobile, setIsMobile] = useState(false)
   const location = useLocation()
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
-
-    handleResize()
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
-
-  // Efeito para scroll otimizado
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY > 0
@@ -39,13 +26,10 @@ export function NavBar() {
     setIsSidebarOpen(false)
   }, [location])
 
-  const logoSrc = isMobile || isScrolled ? logo2 : logo1
-
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen)
   }
 
-  // Fechar o menu se clicar fora dele
   const closeSidebar = e => {
     if (e.target.id === 'sidebar-overlay') {
       setIsSidebarOpen(false)
@@ -59,14 +43,16 @@ export function NavBar() {
           isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
         }`}
       >
-        {/* Logo */}
         <div>
           <a href="/">
-            <img src={logoSrc} className="w-52 h-64" alt="Logo" />
+            <img
+              src={logo}
+              className="w-52 h-64 transition-all duration-75"
+              alt="Logo"
+            />
           </a>
         </div>
 
-        {/* Menu para desktop */}
         <div className="hidden md:flex">
           <ul className="flex gap-4 items-center">
             <NavLink title="Empresa" href="/" />
@@ -79,7 +65,6 @@ export function NavBar() {
           </ul>
         </div>
 
-        {/* Botão do menu lateral para mobile */}
         <div
           className={`md:hidden flex items-center p-2 mr-4 ${
             isScrolled
@@ -96,7 +81,6 @@ export function NavBar() {
         </div>
       </nav>
 
-      {/* Overlay do menu lateral */}
       {isSidebarOpen && (
         <div
           id="sidebar-overlay"
@@ -105,14 +89,12 @@ export function NavBar() {
         />
       )}
 
-      {/* Menu lateral para mobile */}
       <div
         className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out md:hidden overflow-y-auto ${
           isSidebarOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
         <div className="p-4">
-          {/* Cabeçalho do menu lateral */}
           <div className="flex justify-end items-center mb-6">
             <button
               onClick={toggleSidebar}
@@ -122,7 +104,6 @@ export function NavBar() {
             </button>
           </div>
 
-          {/* Links do menu */}
           <div className="space-y-4">
             <ul className="py-2 border-b border-gray-200">
               <NavLink title="Empresa" mobile href="/" />
@@ -138,7 +119,6 @@ export function NavBar() {
             </ul>
           </div>
 
-          {/* Informações de contato no final do menu */}
           <div className="mt-8 space-y-3">
             <div className="flex items-center space-x-2 text-gray-700">
               <MdOutlineEmail size={20} className="text-green-500" />

@@ -1,5 +1,5 @@
 import { MdEmail } from 'react-icons/md'
-import { FaWhatsapp, FaInstagram } from 'react-icons/fa'
+import { FaWhatsapp, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { NavLink } from './NavLink'
 import { useEffect, useRef, useState } from 'react'
 
@@ -44,20 +44,20 @@ export function Footer() {
       className="bg-cover bg-center"
       style={{
         backgroundImage:
-          "linear-gradient(to right, rgba(19,68,111,0.9) 80%, rgba(150,150,150,1) 60%), url('../src/assets/background.jpg')"
+          "linear-gradient(to right, rgba(19,68,111,0.9) 82%, rgba(150,150,150,1) 60%), url('../src/assets/background.jpg')"
       }}
     >
       <div className="flex flex-col gap-10 md:h-[300px] md:flex-row md:justify-around md:items-center">
         <div
           ref={logoContainerRef}
-          className="w-60 h-72 flex items-center justify-center"
+          className="flex items-center justify-center"
         >
           {logoLoaded ? (
             <img
               ref={logoRef}
               src={logoUrl}
               alt="TecLab Logo"
-              className="w-auto h-auto max-w-full max-h-full object-contain"
+              className="w-auto h-72 max-w-full max-h-full object-contain"
               loading="lazy"
               onLoad={() => {
                 if (logoRef.current) {
@@ -93,6 +93,14 @@ export function Footer() {
               target="_blank"
             >
               <FaInstagram className="text-white" />
+              Leall Energia
+            </a>
+            <a
+              className="text-white text-md flex items-center mb-2 gap-2"
+              href="https://www.instagram.com/leallenergia?utm_source=qr"
+              target="_blank"
+            >
+              <FaLinkedin className="text-white" />
               Leall Energia
             </a>
           </div>
