@@ -1,27 +1,45 @@
 import { MdOutlineEmail } from 'react-icons/md'
-import logo from '../assets/logo.png'
+import logo1 from '../assets/logo-branco.png'
+import logo2 from '../assets/logo.png'
 
 import { FaWhatsapp } from 'react-icons/fa'
 import { NavLink } from './NavLink'
 import { useEffect, useState } from 'react'
 import { FiMenu, FiX } from 'react-icons/fi'
+import { useLocation } from 'react-router'
 
 export function NavBar() {
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(window.scrollY > 0)
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+  const location = useLocation()
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0)
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768)
     }
 
-    window.addEventListener('scroll', handleScroll)
-
-    // Cleanup
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
+    handleResize()
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
   }, [])
+
+  // Efeito para scroll otimizado
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.scrollY > 0
+      if (scrolled !== isScrolled) setIsScrolled(scrolled)
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [isScrolled])
+
+  useEffect(() => {
+    setIsSidebarOpen(false)
+  }, [location])
+
+  const logoSrc = isMobile || isScrolled ? logo2 : logo1
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen)
@@ -37,21 +55,21 @@ export function NavBar() {
   return (
     <>
       <nav
-        className={`fixed w-full z-40 transition-all duration-300 h-40 flex flex-row items-center justify-between md:justify-evenly select-none ${
+        className={`fixed w-full z-40  h-40 flex flex-row items-center justify-between md:justify-evenly select-none ${
           isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
         }`}
       >
         {/* Logo */}
         <div>
           <a href="/">
-            <img src={logo} className="w-52 h-64" alt="Logo" />
+            <img src={logoSrc} className="w-52 h-64" alt="Logo" />
           </a>
         </div>
 
         {/* Menu para desktop */}
         <div className="hidden md:flex">
           <ul className="flex gap-4 items-center">
-            <NavLink title="Sobre Nós" href="/" />
+            <NavLink title="Empresa" href="/" />
             <div className="bg-gray-500 w-[1px] h-6"></div>
             <NavLink title="NR-10" href="/nr10" />
             <div className="bg-gray-500 w-[1px] h-6"></div>
@@ -107,7 +125,7 @@ export function NavBar() {
           {/* Links do menu */}
           <div className="space-y-4">
             <ul className="py-2 border-b border-gray-200">
-              <NavLink title="Inicio" mobile href="/" />
+              <NavLink title="Empresa" mobile href="/" />
             </ul>
             <ul className="py-2 border-b border-gray-200">
               <NavLink title="NR-10" mobile href="/nr10" />

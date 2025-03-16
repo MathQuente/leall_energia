@@ -1,9 +1,44 @@
 import { MdEmail } from 'react-icons/md'
-import logo from '../assets/logo.png'
-import { FaWhatsapp } from 'react-icons/fa'
+import { FaWhatsapp, FaInstagram } from 'react-icons/fa'
 import { NavLink } from './NavLink'
+import { useEffect, useRef, useState } from 'react'
 
 export function Footer() {
+  const [logoLoaded, setLogoLoaded] = useState(false)
+  const [logoUrl, setLogoUrl] = useState('')
+  const logoRef = useRef(null)
+  const logoContainerRef = useRef(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      entries => {
+        const [entry] = entries
+        if (entry.isIntersecting && !logoLoaded) {
+          import('../assets/logo.png').then(module => {
+            setLogoUrl(module.default)
+            setLogoLoaded(true)
+          })
+        }
+      },
+      {
+        root: null,
+        rootMargin: '200px',
+        threshold: 0.1
+      }
+    )
+
+    if (logoContainerRef.current) {
+      observer.observe(logoContainerRef.current)
+    }
+
+    return () => {
+      if (logoContainerRef.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        observer.unobserve(logoContainerRef.current)
+      }
+    }
+  }, [logoLoaded])
+
   return (
     <footer
       className="bg-cover bg-center"
@@ -12,16 +47,34 @@ export function Footer() {
           "linear-gradient(to right, rgba(19,68,111,0.9) 80%, rgba(150,150,150,1) 60%), url('../src/assets/trabalhador.jpg')"
       }}
     >
-      {/* Conteúdo do footer */}
       <div className="flex flex-col gap-10 md:h-[300px] md:flex-row md:justify-around md:items-center">
-        {/* Coluna 1 - Logo e CNPJ */}
-        <div className="flex flex-col items-center md:items-start">
-          <img src={logo} alt="TecLab Logo" className="w-60 h-72" />
-          {/* <p className="text-sm">Priorizando a Qualidade</p>
-          <p className="text-sm mt-4">CNPJ: 41.766.131/0001-61</p> */}
+        <div
+          ref={logoContainerRef}
+          className="w-60 h-72 flex items-center justify-center"
+        >
+          {logoLoaded ? (
+            <img
+              ref={logoRef}
+              src={logoUrl}
+              alt="TecLab Logo"
+              className="w-auto h-auto max-w-full max-h-full object-contain"
+              loading="lazy"
+              onLoad={() => {
+                if (logoRef.current) {
+                  logoRef.current.style.opacity = 1
+                }
+              }}
+              style={{
+                opacity: 0,
+                transition: 'opacity 0.3s ease-in',
+                backgroundColor: 'transparent'
+              }}
+            />
+          ) : (
+            <div className="w-60 h-20 bg-transparent"></div>
+          )}
         </div>
 
-        {/* Coluna 2 - Informações de contato */}
         <div className="flex flex-col items-center justify-center md:items-center select-none gap-2">
           <h3 className="text-xl font-semibold  text-white">Faça contato</h3>
           <div className="flex flex-col items-center">
@@ -33,6 +86,15 @@ export function Footer() {
               <FaWhatsapp className="text-white" />
               <p className="text-white">(85) 8430-0302</p>
             </div>
+
+            <a
+              className="text-white text-md flex items-center mb-2 gap-2"
+              href="https://www.instagram.com/leallenergia?utm_source=qr"
+              target="_blank"
+            >
+              <FaInstagram className="text-white" />
+              Leall Energia
+            </a>
           </div>
           <p className="text-center text-white text-md">
             R. Antônio Pereira do Nascimento, 160
@@ -41,16 +103,12 @@ export function Footer() {
           </p>
         </div>
 
-        {/* Coluna 3 - Navegação Rápida */}
         <div className="flex flex-col items-center md:items-center select-none mb-14 md:mb-0">
           <h3 className="text-xl font-semibold text-white">Navegação Rápida</h3>
           <ul className="text-center">
-            <NavLink title="Inicio" href="/" footer />
-
+            <NavLink title="Empresa" href="/" footer />
             <NavLink title="NR-10" href="/nr10" footer />
-
             <NavLink title="Contato" href="/contato" footer />
-
             <NavLink title="Serviços" href="/servicos" footer />
           </ul>
         </div>

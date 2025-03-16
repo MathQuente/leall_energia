@@ -8,10 +8,12 @@ import { Contacts } from './pages/Contacts.jsx'
 import { Layout } from './components/Layout.jsx'
 import { Services } from './pages/Services.jsx'
 import { NR10 } from './pages/NR10.jsx'
+import { ScrollToTop } from './components/returnToTop.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />

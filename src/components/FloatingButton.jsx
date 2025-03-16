@@ -48,7 +48,6 @@ export function FloatingButton({
     <div className="fixed bottom-10 right-5 md:bottom-8 md:right-8 z-40 flex flex-col items-end">
       {isOpen ? (
         <div className="bg-[#f7fdf9] rounded-3xl shadow-lg overflow-hidden w-64 md:w-[400px] h-[272px] relative z-50">
-          {/* Header */}
           <div className="bg-[#25d366] py-4 px-6 flex justify-between items-center">
             <div className="flex items-center gap-1">
               <FaWhatsapp className="text-white size-8" />
@@ -62,14 +61,12 @@ export function FloatingButton({
             </button>
           </div>
 
-          {/* Body */}
           <div className="p-4">
             <div className="bg-white p-4 rounded-2xl shadow-md text-gray-700 text-md">
               {popupMessage}
             </div>
           </div>
 
-          {/* Footer Button - Este é o botão transformado */}
           <div className="p-4 pt-0 flex justify-center">
             <button
               onClick={handleOpenWhatsApp}
@@ -83,13 +80,12 @@ export function FloatingButton({
           </div>
         </div>
       ) : (
-        /* Apenas mostra o botão flutuante quando o popup não está aberto */
         <button
           onClick={handleButtonClick}
-          className="p-4 bg-[#25d366] text-white rounded-full shadow-lg hover:bg-[#25d322] transition-all duration-300 hover:shadow-xl hover:scale-110 active:scale-95 flex items-center justify-center relative"
+          className="p-4 bg-[#25d366] text-white rounded-full shadow-lg hover:bg-[#25d322] transition-all duration-300 hover:shadow-xl hover:scale-110 active:scale-95 flex items-center justify-center relative cursor-pointer"
           aria-label="Botão de ação flutuante"
         >
-          <div className="absolute z-10 top-0 left-0 w-full h-full rounded-full bg-[#25d366] animate-ping"></div>
+          <div className="absolute z-10 top-2 left-2 size-12 rounded-full bg-[#25d366] animate-ping"></div>
           <div className="relative z-20">
             <FaWhatsapp size={32} />
           </div>
