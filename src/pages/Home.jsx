@@ -1,13 +1,13 @@
-import { Container } from './components/Container'
-import { SlideInWhenVisible } from './components/SlideInWhenVisible'
+import { Container } from '../components/Container'
+import { SlideInWhenVisible } from '../components/SlideInWhenVisible'
 
 import { FaHome } from 'react-icons/fa'
 import { IoEyeSharp } from 'react-icons/io5'
 import { HiMiniHandRaised } from 'react-icons/hi2'
 
-import aboutUsImage from '../src/assets/f0960c95-a266-4711-acac-bbd51e53c5af.jpg'
-import ourPrincipes from '../src/assets/eb81fda5-d9cc-49b0-ad8f-c2cc87774498.png'
-import inCompany from '../src/assets/a5e4dd8f-257a-47e3-8cbc-a32db9540c5f.jpg'
+import aboutUsImage from '../assets/f0960c95-a266-4711-acac-bbd51e53c5af.jpg'
+import ourPrincipes from '../assets/eb81fda5-d9cc-49b0-ad8f-c2cc87774498.png'
+import inCompany from '../assets/a5e4dd8f-257a-47e3-8cbc-a32db9540c5f.jpg'
 
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
