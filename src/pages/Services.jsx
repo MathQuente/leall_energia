@@ -171,7 +171,7 @@ export function Services() {
   return (
     <section className="bg-white py-12">
       <Container className="px-4">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16 mb-16">
+        <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-16 mb-16">
           <div className="w-full md:w-1/2">
             <h1 className="text-4xl font-bold bg-gradient-to-r from-[#1196bb] to-[#21256b] bg-clip-text text-transparent mb-4">
               Nossos serviços
