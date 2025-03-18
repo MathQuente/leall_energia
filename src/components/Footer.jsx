@@ -97,7 +97,7 @@ export function Footer() {
             </a>
             <a
               className="text-white text-md flex items-center mb-2 gap-2"
-              href="https://www.instagram.com/leallenergia?utm_source=qr"
+              href="http://linkedin.com/company/leallenergia"
               target="_blank"
             >
               <FaLinkedin className="text-white" />

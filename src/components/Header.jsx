@@ -18,7 +18,7 @@ export function Header({ backgroundImage }) {
                 className="text-4xl md:text-7xl lg:text-8xl text-white"
                 style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 1)' }}
               >
-                Bem-vindo
+                Bem-vindo à
               </h1>
             </SlideInWhenVisible>
             <SlideInWhenVisible direction="right-header">
@@ -27,6 +27,15 @@ export function Header({ backgroundImage }) {
                 style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 1)' }}
               >
                 Leall Energia
+              </p>
+            </SlideInWhenVisible>
+            <SlideInWhenVisible direction="right-header">
+              <p
+                className="text-xl md:text-2xl lg:text-3xl leading-tight text-white font-bold mb-4"
+                style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 1)' }}
+              >
+                Especializada em ensaios de isolação elétrica em equipamentos de
+                proteção
               </p>
             </SlideInWhenVisible>
           </div>
