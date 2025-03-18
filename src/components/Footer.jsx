@@ -2,6 +2,7 @@ import { MdEmail } from 'react-icons/md'
 import { FaWhatsapp, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { NavLink } from './NavLink'
 import { useEffect, useRef, useState } from 'react'
+import background from '../assets/background.jpg'
 
 export function Footer() {
   const [logoLoaded, setLogoLoaded] = useState(false)
@@ -44,7 +45,7 @@ export function Footer() {
       className="bg-cover bg-center"
       style={{
         backgroundImage:
-          "linear-gradient(to right, rgba(19,68,111,0.9) 82%, rgba(150,150,150,1) 60%), url('../src/assets/background.jpg')"
+          `linear-gradient(to right, rgba(19,68,111,0.9) 82%, rgba(150,150,150,1) 60%), url('${background}')`
       }}
     >
       <div className="flex flex-col gap-10 md:h-[300px] md:flex-row md:justify-around md:items-center">
