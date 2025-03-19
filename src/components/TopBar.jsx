@@ -10,7 +10,7 @@ export function TopBar() {
       </div>
       <div className="flex items-center gap-2">
         <FaWhatsapp className="text-white size-5" />
-        <p className="text-white text-sm">(85) 8430-0302</p>
+        <p className="text-white text-sm">(85) 98430-0302</p>
       </div>
     </div>
   )

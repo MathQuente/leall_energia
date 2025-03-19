@@ -8,6 +8,15 @@ import { HiMiniHandRaised } from 'react-icons/hi2'
 import aboutUsImage from '../assets/f0960c95-a266-4711-acac-bbd51e53c5af.jpg'
 import ourPrincipes from '../assets/eb81fda5-d9cc-49b0-ad8f-c2cc87774498.png'
 import inCompany from '../assets/a5e4dd8f-257a-47e3-8cbc-a32db9540c5f.jpg'
+import adcd from '../assets/adcd.jpg';
+import asd from '../assets/asd.png';
+import cxcv from '../assets/cxcv.png';
+import das from '../assets/das.png';
+import dsf from '../assets/dsf.jpg';
+import qwe from '../assets/qwe.png';
+import ret from '../assets/ret.jpg';
+import sdfsdf from '../assets/sdfsdf.jpg';
+import wqewqe from '../assets/wqewqe.jpg';
 
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -16,15 +25,15 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
 const images = [
-  { id: 1, url: '../src/assets/adcd.jpg' },
-  { id: 2, url: '../src/assets/asd.png' },
-  { id: 3, url: '../src/assets/cxcv.png' },
-  { id: 4, url: '../src/assets/das.png' },
-  { id: 5, url: '../src/assets/dsf.jpg' },
-  { id: 6, url: '../src/assets/qwe.png' },
-  { id: 7, url: '../src/assets/ret.jpg' },
-  { id: 8, url: '../src/assets/sdfsdf.jpg' },
-  { id: 9, url: '../src/assets/wqewqe.jpg' }
+  { id: 1, file: adcd },
+  { id: 2, file: asd },
+  { id: 3, file: cxcv },
+  { id: 4, file: das },
+  { id: 5, file: dsf },
+  { id: 6, file: qwe },
+  { id: 7, file: ret },
+  { id: 8, file: sdfsdf },
+  { id: 9, file: wqewqe }
 ]
 
 const principles = [
@@ -169,7 +178,7 @@ export function Home() {
               <SwiperSlide key={image.id}>
                 <div className="flex items-center justify-center h-40 p-7">
                   <img
-                    src={image.url}
+                    src={image.file}
                     alt={`Cliente ${image.id}`}
                     className="max-h-full max-w-full object-contain"
                     loading="lazy"

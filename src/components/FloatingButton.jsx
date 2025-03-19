@@ -4,7 +4,7 @@ import { IoIosArrowForward } from 'react-icons/io'
 
 export function FloatingButton({
   phoneNumber = import.meta.env.VITE_WHATSAPP_NUMBER,
-  message = 'Olá, gostaria de mais informações!',
+  message = 'Olá! Venho do site. Gostaria de mais informações.',
   countryCode = '55',
   popupMessage = 'Entre em contato para tirar as suas dúvidas e fazer uma cotação.'
 }) {

@@ -15,7 +15,7 @@ export function Header({ backgroundImage }) {
           <div className="text-center text-white select-none">
             <SlideInWhenVisible direction="left-header">
               <h1
-                className="text-4xl md:text-7xl lg:text-8xl text-white"
+                className="text-3xl md:text-7xl lg:text-6xl text-white"
                 style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 1)' }}
               >
                 Bem-vindo à
@@ -23,7 +23,7 @@ export function Header({ backgroundImage }) {
             </SlideInWhenVisible>
             <SlideInWhenVisible direction="right-header">
               <p
-                className="text-6xl md:text-8xl lg:text-9xl leading-tight text-white font-bold mb-4"
+                className="text-5xl md:text-7xl lg:text-8xl leading-tight text-white font-bold mb-4"
                 style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 1)' }}
               >
                 Leall Energia
@@ -31,7 +31,7 @@ export function Header({ backgroundImage }) {
             </SlideInWhenVisible>
             <SlideInWhenVisible direction="right-header">
               <p
-                className="text-xl md:text-2xl lg:text-3xl leading-tight text-white font-bold mb-4"
+                className="text-xl md:text-2xl leading-tight text-white font-bold mb-4"
                 style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 1)' }}
               >
                 Especializada em ensaios de isolação elétrica em equipamentos de

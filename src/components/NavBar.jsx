@@ -112,10 +112,10 @@ export function NavBar() {
               <NavLink title="NR-10" mobile href="/nr10" />
             </ul>
             <ul className="py-2 border-b border-gray-200">
-              <NavLink title="Contato" mobile href="/contato" />
+              <NavLink title="Serviços" mobile href="/servicos" />
             </ul>
             <ul className="py-2 border-b border-gray-200">
-              <NavLink title="Serviços" mobile href="/servicos" />
+              <NavLink title="Contato" mobile href="/contato" />
             </ul>
           </div>
 
@@ -126,7 +126,7 @@ export function NavBar() {
             </div>
             <div className="flex items-center space-x-2 text-gray-700">
               <FaWhatsapp size={20} className="text-green-500" />
-              <span>(85) 8430-0302</span>
+              <span>(85) 98430-0302</span>
             </div>
           </div>
         </div>
