@@ -42,15 +42,15 @@ export function SlideInWhenVisible({ children, direction = 'left' }) {
           visible: `${baseVisible} translate-x-0`
         }
       case 'left-header':
-        return {
-          hidden: `${baseHidden} -translate-x-50 md:-translate-x-48 lg:-translate-x-64`,
-          visible: `${baseVisible} translate-y-0`
-        }
+      return {
+        hidden: `${baseHidden} -translate-x-20 md:-translate-x-32 lg:-translate-x-40`,
+        visible: `${baseVisible} translate-x-0`
+      }
       case 'right-header':
-        return {
-          hidden: `${baseHidden} translate-x-50 md:translate-x-48 lg:translate-x-64`,
-          visible: `${baseVisible} translate-y-0`
-        }
+      return {
+        hidden: `hidden: ${baseHidden} translate-x-20 md:translate-x-32 lg:translate-x-40`,
+        visible: `${baseVisible} translate-x-0`
+      }
       default:
         return {
           hidden: baseHidden,
@@ -65,8 +65,7 @@ export function SlideInWhenVisible({ children, direction = 'left' }) {
     <div
       ref={ref}
       className={`
-        transform transition-all
-        duration-[1.5s] ease-out
+        transform transition-all duration-1000 ease-out
         ${isVisible ? visible : hidden}
       `}
     >

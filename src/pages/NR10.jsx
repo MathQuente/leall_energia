@@ -5,12 +5,13 @@ export function NR10() {
   return (
     <div className="bg-white">
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 p-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 p-2 pt-10 lg:p-10">
           <section className="flex flex-col">
             <h1 className="text-3xl font-bold text-center bg-gradient-to-r from-[#1196bb] to-[#21256b] bg-clip-text text-transparent">
               Segurança no trabalho
             </h1>
-            <p className="mt-10 text-xl text-gray-900 text-justify">
+            <div className='lg:text-justify sm:text-center'>
+            <p className="mt-10 text-xl text-gray-900">
               A Norma Regulamentadora NR 10, do Ministério do Trabalho, descreve
               as relações implícitas na interação de profissionais com o sistema
               elétrico. A segurança destes trabalhadores deve ser garantida com
@@ -23,24 +24,24 @@ export function NR10() {
               O que diz a norma NR 10:
             </h2>
             <div className="mt-5 space-y-5">
-              <p className="text-xl text-gray-900 text-justify">
+              <p className="text-xl text-gray-900">
                 <strong>10.2.4</strong> Os estabelecimentos com carga instalada
                 superior a 75 kW devem constituir e manter o Prontuário de
                 Instalações Elétricas, contendo, além do disposto no subitem
                 10.2.3, no mínimo:
               </p>
-              <p className="text-xl text-gray-900 text-justify font-bold">
+              <p className="text-xl text-gray-900 font-bold">
                 e) Resultados dos testes de isolação elétrica realizados em
                 equipamentos de proteção individual e coletiva;
               </p>
-              <p className="text-xl text-gray-900 text-justify">
+              <p className="text-xl text-gray-900">
                 <strong>10.4.3.1</strong> Os equipamentos, dispositivos e
                 ferramentas que possuam isolamento elétrico devem estar
                 adequados às tensões envolvidas, e serem inspecionados e
                 testados de acordo com as regulamentações existentes ou
                 recomendações dos fabricantes.
               </p>
-              <p className="text-xl text-gray-900 text-justify">
+              <p className="text-xl text-gray-900">
                 <strong>10.7.8</strong> Os equipamentos, ferramentas e
                 dispositivos isolantes ou equipados com materiais isolantes,
                 destinados ao trabalho em alta tensão, devem ser submetidos a
@@ -48,6 +49,7 @@ export function NR10() {
                 obedecendo-se as especificações do fabricante, os procedimentos
                 da empresa e, na ausência destes, anualmente.
               </p>
+            </div>
             </div>
           </section>
           <aside className="flex justify-center">
